@@ -1,36 +1,3 @@
-x=1
-y=23
-z=456
-a="|"
-
-
-print(f"{a}{a:=^21}{a}")
-print(f"{a}{x:>10}{a}{x:<10}{a}")
-print(f"{a}{y:>10}{a}{y:<10}{a}")
-print(f"{a}{z:>10}{a}{z:<10}{a}")
-print(f"{a}{a:=^21}{a}")
-
-print()
-print()
-
-print(f"|{"|":=^21}|")
-print(f"|{"1|1": ^21}|")
-print(f"|{"23|23": ^21}|")
-print(f"|{"456|456": ^21}|")
-print(f"|{"|":=^21}|")
-
-
-# |==========|==========|
-# |         1|1         |
-# |        23|23        |
-# |       456|456       |
-# |==========|==========|
-
-# |==========|==========|
-# |         1|1         |
-# |        23|23        |
-# |       456|456       |
-# |==========|==========|
 
 # ---------------------------------- Task 1 ---------------------------------- #
 ### Description:
@@ -45,7 +12,10 @@ age = 30
 color = 'black'
 
 ### Your code here
-
+print(f"{' Task 1 ':-^70}")
+print()
+print(f"Hello, my name is {name}, I am {age} years old, and my favorite color is {color}.")
+print()
 
 ### Expected output
 # Hello, my name is Alice, I am 30 years old, and my favorite color is black.
@@ -57,10 +27,13 @@ color = 'black'
 
 ### Given:
 birth_year = 1993
-current_year = 2023
+current_year = 2025
 
 ### Your code here
-
+print(f"{' Task 2 ':-^70}")
+print()
+print(f"Alice is {current_year - birth_year} years old.")
+print()
 
 ### Expected output
 # Alice is 30 years old.
@@ -74,7 +47,10 @@ current_year = 2023
 amount = 1234567.89
 
 ### Your code here
-
+print(f"{' Task 3 ':-^70}")
+print()
+print(f"${amount:,}")
+print()
 
 ### Expected output
 # $1,234,567.89
@@ -95,11 +71,17 @@ item2_price = 2.49
 item3_name = "Eggs"
 item3_price = 3.59
 
-### Your code here
+total = item1_price + item2_price + item3_price
 
+### Your code here
+print(f"{' Task 4 ':-^70}")
+print()
 print(f"{item1_name:<26}{item1_price}")
-print(f"{item2_name:<26}{item2_price:}")
-print(f"{item3_name:<26}{item3_price:}")
+print(f"{item2_name:<26}{item2_price}")
+print(f"{item3_name:<26}{item3_price}")
+print(f"{'-':-^30}")
+print(f"{'Total: ':<{30-len(str(total))}}{total}")
+print()
 
 ### Expected output
 # Milk                           1.99
@@ -120,11 +102,13 @@ seconds = 30
 
 ### Your code here
 
+print(f"{' Task 5 ':-^70}")
+print()
 pace = (hours*60 + minutes + seconds/60/60)/distance_km
 total_time_in_hours = hours + minutes/60 + seconds/60/60
 print (f"Alice's pace: {pace:.2f} minutes/km")
 print (f"Total time: {total_time_in_hours:.2f} hours")
-
+print()
 
 ### Expected output
 # Alice's pace: 5.33 minutes/km
