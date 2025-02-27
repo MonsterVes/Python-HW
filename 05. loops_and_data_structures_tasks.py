@@ -94,6 +94,8 @@ words = ["hello", "world", "python", "is", "fun", "and", "useful"]
 refrigerated = {'dairy', 'meats', 'frozen foods', 'seafood', 'deli'}
 sale = {'cereals', 'dairy', 'snacks', 'frozen foods', 'beverages'}
 
+### Your code here
+
 #USING SETS
 
 # ref_and_sale = refrigerated.intersection(sale)
@@ -114,7 +116,7 @@ sale = {'cereals', 'dairy', 'snacks', 'frozen foods', 'beverages'}
 # print(f"Sale categories not needing refrigeration: {sale_no_ref}")
 # print(f"Suggested new sale categories from refrigerated items: {new_sale_cat}")
 
-### Your code here
+
 
 ### EXPECTED OUTPUT:
 # Categories both refrigerated and on sale: {'dairy', 'frozen foods'}
