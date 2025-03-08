@@ -9,15 +9,48 @@ def get_user_data():
                 "weight": "user weight in kilograms"
             }
     """
-    input_data = {}
-    name = input("Name: ")
-    input_data["name"] = name
-    height = cm_to_meters(int(input("Height in centimeters: ")))
-    input_data["height"] = height
-    weight = float(input("Weigth in kilograms: "))
-    input_data["weight"] = weight
-    return  input_data
+    input_data = {} 
+    while True:  
+        name = input("Name: ")
+        if validate_name(name):
+            input_data["name"] = name
+            break
+    while True:
+        height = cm_to_meters(int(input("Height in centimeters: ")))
+        if validate_height(height):
+            input_data["height"] = height
+            break
+    while True:
+        weight = float(input("Weight in kilograms: "))
+        if validate_weight(weight):
+            input_data["weight"] = weight 
+            break
+    return input_data
 
+    
+def validate_name(name_check):
+    while True:
+        if len(name_check) > 2 :
+            return True
+        else:
+            return False
+        
+    
+def validate_height(height_check):
+    while True:
+        if 50 <= height_check*100 <= 250 :
+            return True   
+        else:
+            return False
+        
+
+def validate_weight(weight_check):
+    while True:
+        if 5 <= weight_check <= 300 :
+            return True 
+        else:
+            return False
+        
 
 def calc_BMI(w,h):
     """calculates the BMI
@@ -30,6 +63,7 @@ def calc_BMI(w,h):
         [float] -- [calculated BMI = w / (h*h)]
     """
     return w / (h*h)
+
 
 def calc_BMI_category(bmi):
     """Calculates the BMI category
