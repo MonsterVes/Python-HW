@@ -92,6 +92,29 @@
 
 # YOUR CODE HERE
 
+# def find_similar(list_of_numbers):
+#     similar_lists = []
+#     for num in range(1, len(list_of_numbers)-1):
+#         sublist = []
+#         if list_of_numbers[num] == list_of_numbers[num+1]:
+#             sublist.append(list_of_numbers[num])
+#             sublist.append(list_of_numbers[num + 1])
+#             count = 2
+#             while (num + count) < len(list_of_numbers):
+#                 if list_of_numbers[num] == list_of_numbers[num + count]:
+#                     sublist.append(list_of_numbers[num + count])
+#                     count += 1
+#                 else:
+#                     break
+#             similar_lists.append(sublist)
+#     return similar_lists
+
+# def find_longest_list(list_of_lists):
+#     print(max(list_of_lists, key = len))
+
+# l = [4, 4, 2, 2, 2, 3, 3, 1, 4, 4, 4]
+# find_longest_list(find_similar(l))
+
 
 # --------------------------------- Задача 5. -------------------------------- #
 # Напишете програма, която създава следната квадратна матрица m(n*n), по
@@ -112,12 +135,18 @@
 
 # YOUR CODE HERE
 
-# matrix_size = int(input("Enter matrix size: "))
-# for col in range(1, matrix_size+1):
-#     for row in range(1, col+1):
-#         print(col + matrix_size, sep = ", ",end = " ")
-#     print(col, sep = ", ")
+matrix_size = int(input("Enter matrix size: "))
+matrix = []
+for number in range(1, matrix_size+1):
+    element = [number]
+    matrix.append(element)
+    count = 1
+    while count < matrix_size:
+        element.append(element[-1] + matrix_size)
+        count+=1
 
+for element in matrix:
+    print(element)  
 
 # --------------------------------- Задача 6. -------------------------------- #
 # Напишете програма, която създава следната квадратна матрица (n*n), по
