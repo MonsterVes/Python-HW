@@ -60,6 +60,23 @@
 
 # YOUR CODE HERE
 
+# score_list = {}
+
+# while True:
+#     student_score = input("Student and score: ")
+#     if student_score:
+#         student, score = student_score.split(" ")
+#         if student:
+#             if student in score_list:
+#                 score_list[student].append(int(score))
+#             else:
+#                 score_list[student] = [int(score)]
+#     else:
+#         break
+# # average = {k:sum(v)/len(v) for k, v in score_list.items()}
+# # print(", ".join(f"{k}: {v}"for k, v in average.items()) )
+
+# print(", ".join(f"{k}: {sum(v)/len(v)}" for k, v in score_list.items()))
 
 # --------------------------------- Задача 4. -------------------------------- #
 # Напишете програма на Python, която създава телефонен указател, позволяващ
