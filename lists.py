@@ -93,26 +93,26 @@
 # YOUR CODE HERE
 
 # def find_similar(list_of_numbers):
-#     similar_lists = []
-#     for num in range(1, len(list_of_numbers)-1):
-#         sublist = []
-#         if list_of_numbers[num] == list_of_numbers[num+1]:
-#             sublist.append(list_of_numbers[num])
-#             sublist.append(list_of_numbers[num + 1])
-#             count = 2
-#             while (num + count) < len(list_of_numbers):
-#                 if list_of_numbers[num] == list_of_numbers[num + count]:
-#                     sublist.append(list_of_numbers[num + count])
-#                     count += 1
-#                 else:
-#                     break
-#             similar_lists.append(sublist)
-#     return similar_lists
+#     """Checking for consecutive similar numbers and adds them to a sublist. 
+#     Each sublist will be appended to similars_list, where we will later find the first longest list of similar numbers 
+#     """
+#     similars_lists = []
+#     num = 0
+#     while num < len(list_of_numbers):
+#         sublist = [list_of_numbers[num]]
+#         while (num + 1) < len(list_of_numbers) and list_of_numbers[num] == list_of_numbers[num + 1]:
+#             sublist.append(list_of_numbers[num +1])
+#             num +=1
+#         if len(sublist) > 1:
+#             similars_lists.append(sublist)
+#         num +=1
+#     return similars_lists
+
 
 # def find_longest_list(list_of_lists):
 #     print(max(list_of_lists, key = len))
 
-# l = [4, 4, 2, 2, 2, 3, 3, 1, 4, 4, 4]
+# l = [4, 2, 2, 2, 3, 3, 1, 4, 4, 4]
 # find_longest_list(find_similar(l))
 
 
@@ -135,18 +135,18 @@
 
 # YOUR CODE HERE
 
-matrix_size = int(input("Enter matrix size: "))
-matrix = []
-for number in range(1, matrix_size+1):
-    element = [number]
-    matrix.append(element)
-    count = 1
-    while count < matrix_size:
-        element.append(element[-1] + matrix_size)
-        count+=1
+# matrix_size = int(input("Enter matrix size: "))
+# matrix = []
+# for number in range(1, matrix_size+1):
+#     element = [number]
+#     matrix.append(element)
+#     count = 1
+#     while count < matrix_size:
+#         element.append(element[-1] + matrix_size)
+#         count+=1
 
-for element in matrix:
-    print(element)  
+# for element in matrix:
+#     print(element)  
 
 # --------------------------------- Задача 6. -------------------------------- #
 # Напишете програма, която създава следната квадратна матрица (n*n), по
@@ -166,3 +166,50 @@ for element in matrix:
 #         [4, 5, 12, 13]
 
 # YOUR CODE HERE
+
+
+# --------------------------------- Задача 7. -------------------------------- #
+# Напишете програма, която намира всички последователности от поне два еднакви
+# елемента в списък и ги показва. Редът на показването няма значение.
+
+# Пример:
+#     вход: numbers=[2, 1, 1, 2, 3, 3, 2, 2, 2, 1],
+#     изход:
+#           [1,1]
+#           [3,3]
+#           [2,2,2]
+
+#     вход: numbers=[4, 4, 2, 2, 2, 3, 3, 1, 4, 4, 4],
+#     изход:
+#          [4, 4]
+#          [2, 2, 2]
+#          [3, 3]
+#          [4, 4, 4]
+
+
+# YOUR CODE HERE
+
+# def find_similar(list_of_numbers):
+#     """Checking for consecutive similar numbers and adds them to a sublist. 
+#     Each sublist will be appended to similars_list, where we will later find the first longest list of similar numbers 
+#     """
+#     similars_lists = []
+#     num = 0
+#     while num < len(list_of_numbers):
+#         sublist = [list_of_numbers[num]]
+#         while (num + 1) < len(list_of_numbers) and list_of_numbers[num] == list_of_numbers[num+1]:
+#             sublist.append(list_of_numbers[num+1])
+#             num +=1
+#         if len(sublist) > 1:
+#             similars_lists.append(sublist)
+#         num +=1   
+#     return similars_lists
+
+
+
+# l = [2, 1, 1, 2, 3, 3, 2, 2, 2, 1]
+# for item in find_similar(l):
+#     print(item)
+
+
+
