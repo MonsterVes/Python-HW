@@ -140,10 +140,10 @@
 # for number in range(1, matrix_size+1):
 #     element = [number]
 #     matrix.append(element)
-#     count = 1
-#     while count < matrix_size:
+#     col_count = 1
+#     while col_count < matrix_size:
 #         element.append(element[-1] + matrix_size)
-#         count+=1
+#         col_count+=1
 
 # for element in matrix:
 #     print(element)  
@@ -166,6 +166,23 @@
 #         [4, 5, 12, 13]
 
 # YOUR CODE HERE
+matrix_size = int(input("Enter matrix size: "))
+matrix = []
+for number in range(1, matrix_size+1):
+    element = [number]
+    matrix.append(element)  # First column/element
+    col_count = 2   # Start for second column/element
+    while col_count < matrix_size+1:
+        if col_count%2 == 0:    # If the column is even the elements should decrease
+            element.append((col_count*matrix_size + 1) - element[0])
+            col_count+=1
+        else: # If the column is odd the elements should increase
+            element.append((col_count - 1) * matrix_size + element[0] )
+            col_count+=1
+for element in matrix:
+    print(element)  
+
+
 
 
 # --------------------------------- Задача 7. -------------------------------- #
