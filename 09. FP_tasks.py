@@ -61,20 +61,19 @@ quotes = [
 ### YOUR CODE HERE
 def filter_words(text):
     quotes = map(lambda quote: quote.split(" "), text)
-    # elements = map(lambda el: el, quotes)
-    # conditions = filter(lambda word: word.startswith("t"), elements)
+    # filtered_words = [word for word in quotes if word.startswith("t") and len(word)>3]
+    
+    # filtered = filter(lambda word: word.startswith("t"), quotes)
     return quotes
 
     # return [word for word in quotes if word.startswith("t") and len(word)>3]
-    # filtered_words = [word for word in quotes if word.startswith("t") and len(word)>3]
+    
    
 #     for quote in text:
 #         filtered = [word for word in quote.split(" ") if word.startswith("t") and len(word)>3]
 
     
 print(list(filter_words(quotes)))
-# gg = filter_words(quotes)
-# print(list(gg))
 
 
 
