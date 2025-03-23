@@ -62,7 +62,7 @@ quotes = [
 def filter_words(text):
     quotes = map(lambda quote: quote.split(" "), text)
     # filtered_words = [word for word in quotes if word.startswith("t") and len(word)>3]
-    
+
     # filtered = filter(lambda word: word.startswith("t"), quotes)
     return quotes
 
@@ -84,7 +84,8 @@ print(list(filter_words(quotes)))
 
 # ---------------------------------- Task 4 ---------------------------------- #
 """ DESCRIPTION:
-Given the list of Douglas Adams quotes, write a function that finds the total number of words across all quotes. For simplicity, assume that words are space-separated tokens. Use the reduce function to accumulate the total count.
+Given the list of Douglas Adams quotes, write a function that finds the total number of words across all quotes. For simplicity, 
+assume that words are space-separated tokens. Use the reduce function to accumulate the total count.
 This task should help you practice using map and reduce for aggregation purposes.
 """
 
